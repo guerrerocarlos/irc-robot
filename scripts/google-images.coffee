@@ -14,7 +14,7 @@ module.exports = (robot) ->
     imageMe msg, "animated #{msg.match[1]}", (url) ->
       msg.send url
 
-  robot.respond /poner bigote (.*)/i, (msg) ->
+  robot.respond /ponle bigote (.*)/i, (msg) ->
     imagery = msg.match[1]
 
     if imagery.match /^https?:\/\//i

@@ -1,1 +1,1 @@
-app: bin/hubot -a irc -n RobotDeSoporte 
+app: bin/hubot -a irc -n _robotina_ 
