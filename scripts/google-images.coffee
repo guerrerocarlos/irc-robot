@@ -1,12 +1,10 @@
 # A way to interact with the Google Images API.
 #
-# image me <query>    - The Original. Queries Google Images for <query> and
-#                       returns a random top result.
-# animate me <query>  - The same thing as `image me`, except adds a few
-#                       parameters to try to return an animated GIF instead.
-# mustache me <url>   - Adds a mustache to the specified URL.
-# mustache me <query> - Searches Google Images for the specified query and
-#                       mustaches it.
+# imagen de <palabra>    - Busca una imagen en google images
+# una animacion de <palabra>  - Igual que el anterior pero intenta que sea una animacion en gif  
+# poner bigote <url>   - Le pone un bigote a la imagen de esa url.
+# poner bigote <palabra> - Busca en google y le pone un bigote a lo que encuentra 
+
 module.exports = (robot) ->
   robot.respond /(imagen|img)( de)? (.*)/i, (msg) ->
     imageMe msg, msg.match[3], (url) ->
@@ -16,7 +14,7 @@ module.exports = (robot) ->
     imageMe msg, "animated #{msg.match[1]}", (url) ->
       msg.send url
 
-  robot.respond /(?:mo?u)?sta(?:s|c)he?(?: me)? (.*)/i, (msg) ->
+  robot.respond /poner bigote (.*)/i, (msg) ->
     imagery = msg.match[1]
 
     if imagery.match /^https?:\/\//i

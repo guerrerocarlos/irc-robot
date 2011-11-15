@@ -5,6 +5,6 @@
 # help - Displays all of the help commands that Hubot knows about.
 
 module.exports = (robot) ->
-  robot.respond /help$/i, (msg) ->
+  robot.respond /ayuda$/i, (msg) ->
     msg.send robot.helpCommands().join("\n")
 
