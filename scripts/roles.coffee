@@ -9,7 +9,7 @@
 #
 
 module.exports = (robot) ->
-  robot.respond /quien (es|eres) ([\w .-]+)\?*$/i, (msg) ->
+  robot.respond /quien es ([\w .-]+)\?*$/i, (msg) ->
     name = msg.match[1]
 
     if name is "tu"
