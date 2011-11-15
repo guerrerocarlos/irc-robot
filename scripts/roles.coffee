@@ -19,7 +19,7 @@ module.exports = (robot) ->
     else if user = robot.userForName name
       user.roles = user.roles or [ ]
       if user.roles.length > 0
-        msg.send "#{name} is #{user.roles.join(", ")}."
+        msg.send "#{name} es #{user.roles.join(", ")}."
       else
         msg.send "#{name} ni idea."
     else

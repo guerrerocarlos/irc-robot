@@ -1,7 +1,7 @@
 # Allows Hubot to do mathematics.
 #
 # cuanto da <ecuacion> - Resultado matematico de ecuacion 
-# convierte de <tanto> a <tantootro> - Convierte de una unidad a otra 
+# convierte de 10Kg a lb - Convierte de una unidad a otra 
 module.exports = (robot) ->
   robot.respond /(cuanto|calculame|convierte|convierteme)( de| me| da| es|cuanto da|cuanto es)? (.*)/i, (msg) ->
     msg

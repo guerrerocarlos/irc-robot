@@ -2,7 +2,7 @@
 #
 # These commands are grabbed from comment blocks at the top of each file.
 #
-# help - Displays all of the help commands that Hubot knows about.
+# ayuda - muestra esta lista de opciones posibles
 
 module.exports = (robot) ->
   robot.respond /ayuda$/i, (msg) ->
