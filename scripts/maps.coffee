@@ -4,7 +4,7 @@
 
 module.exports = (robot) ->
 
-  robot.respond /(?:(satellite|terrain|hybrid)[- ])?map me (.+)/i, (msg) ->
+  robot.respond /(?:(satelite|terreno|hibrido)[- ])?dame el mapa de (.+)/i, (msg) ->
     mapType  = msg.match[1] or "roadmap"
     location = msg.match[2]
     mapUrl   = "http://maps.google.com/maps/api/staticmap?markers=" +
