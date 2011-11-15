@@ -67,19 +67,19 @@ module.exports = (robot) ->
   robot.respond /(?:traduce)(?: me)?(?:(?: de) ([a-z]*))?(?:(?: (?:a)?para) ([a-z]*))? (.*)/i, (msg) ->
     term   = "\"#{msg.match[3]}\""
     origin = if msg.match[1] isnt undefined then getCode(msg.match[1], languages) else 'auto'
-    target = if msg.match[2] isnt undefined then getCode(msg.match[2], languages) else 'en'
+    target = if msg.match[2] isnt undefined then getCode(msg.match[2], languages) else 'es'
     
     msg.http("http://translate.google.com/translate_a/t")
       .query({
         client: 't'
-        hl: 'es'
+        hl: 'en'
         multires: 1
         sc: 1
         sl: origin
         ssel: 0
         tl: target
         tsel: 0
-        uptl: "es"
+        uptl: "en"
         text: term
       })
       .get() (err, res, body) ->

@@ -3,7 +3,7 @@
 # video de <palabra> - busca esa palabra en youtube y da el resultado
 
 module.exports = (robot) ->
-  robot.respond /(buscame el video|video)( de)? (.*)/i, (msg) ->
+  robot.respond /(buscame|dame|dime) (el|un) (video)( de)? (.*)/i, (msg) ->
     query = msg.match[3]
     msg.http("http://gdata.youtube.com/feeds/api/videos")
       .query({
