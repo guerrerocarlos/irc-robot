@@ -3,7 +3,7 @@
 # google me <query>   - Googles <query> & returns 1st result's URL
 
 module.exports = (robot) ->
-  robot.respond /busca (.*)/i, (msg) ->
+  robot.respond /(busca)(me)? (.*)/i, (msg) ->
     googleMe msg, msg.match[3], (url) ->
       msg.send url
 
