@@ -1,7 +1,7 @@
 # Pugme is the most important thing in your life
 #
-# pug me - Receive a pug
-# pug bomb N - get N pugs
+# cachorrito para mi - Te da un cachorrito 
+# bomba de cachorritos N - Te da N cachorritos 
 
 module.exports = (robot) ->
 

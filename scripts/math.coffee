@@ -1,9 +1,9 @@
 # Allows Hubot to do mathematics.
 #
-# math me <expression> - Calculate the given expression.
-# convert me <expression> to <units> - Convert expression to given units.
+# cuanto da <ecuacion> - Resultado matematico de ecuacion 
+# convierte de <tanto> a <tantootro> - Convierte de una unidad a otra 
 module.exports = (robot) ->
-  robot.respond /(calc|calculate|convert|math)( me)? (.*)/i, (msg) ->
+  robot.respond /(cuanto|calculame|convierte|convierteme)( de| me| da| es|cuanto da|cuanto es)? (.*)/i, (msg) ->
     msg
       .http('http://www.google.com/ig/calculator')
       .query

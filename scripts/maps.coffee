@@ -1,6 +1,6 @@
 # Interacts with the Google Maps API.
 #
-# map me <query> - Returns a map view of the area returned by `query`.
+# dame el mapa de <lugar> - retorna el resultado de google maps de ese lugar. 
 
 module.exports = (robot) ->
 

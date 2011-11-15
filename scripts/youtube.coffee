@@ -1,9 +1,9 @@
 # Messing around with the YouTube API.
 #
-# youtube me <query> - Searches YouTube for the query and returns the video
-#                      embed link.
+# video de <palabra> - busca esa palabra en youtube y da el resultado
+
 module.exports = (robot) ->
-  robot.respond /(youtube|yt)( me)? (.*)/i, (msg) ->
+  robot.respond /(buscame el video|video)( de)? (.*)/i, (msg) ->
     query = msg.match[3]
     msg.http("http://gdata.youtube.com/feeds/api/videos")
       .query({

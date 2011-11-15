@@ -1,9 +1,8 @@
 # Allows Hubot to know many languages.
 #
-# translate me <phrase> - Searches for a translation for the <phrase> and then
-#                         prints that bad boy out.
+# traduce <frase> - traduce esa frase y la escribe en un idioma entendible 
 #
-# translate me from <source> into <target> <phrase> - Translates <phrase> from <source> into <target>. Both <source> and <target> are optional
+# traduce de <idioma1> a <idioma2> <frase> - Traduce la frase de idioma1 a idioma2.
 #
 
 languages =
@@ -73,14 +72,14 @@ module.exports = (robot) ->
     msg.http("http://translate.google.com/translate_a/t")
       .query({
         client: 't'
-        hl: 'en'
+        hl: 'es'
         multires: 1
         sc: 1
         sl: origin
         ssel: 0
         tl: target
         tsel: 0
-        uptl: "en"
+        uptl: "es"
         text: term
       })
       .get() (err, res, body) ->
@@ -91,7 +90,7 @@ module.exports = (robot) ->
           parsed = parsed[0] && parsed[0][0] && parsed[0][0][0]
           if parsed
             if msg.match[2] is undefined
-              msg.send "#{term} is #{language} for #{parsed}"
+              msg.send "#{term} es #{language} para #{parsed}"
             else
-              msg.send "The #{language} #{term} translates as #{parsed} in #{languages[target]}"
+              msg.send "En #{language} #{term} traduce como #{parsed} en #{languages[target]}"
 

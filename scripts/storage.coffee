@@ -1,7 +1,7 @@
 # Inspect the data in redis easily
 #
-# show users - Display all users that hubot knows about
-# show storage - Display the contents that are persisted in redis
+# a quienes conoces - da la lista de los usuarios de los que sabe algo 
+# almacenamiento - muestra el contenido de la informacion en la base de datos Redis 
 #
 
 Sys = require "sys"
