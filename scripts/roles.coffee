@@ -45,7 +45,7 @@ module.exports = (robot) ->
         else
           msg.send "No se nada sobre #{name}."
 
-  robot.respond /([\w .-]+) is not (["'\w: ]+)[.!]*$/i, (msg) ->
+  robot.respond /([\w .-]+) no es (["'\w: ]+)[.!]*$/i, (msg) ->
     name    = msg.match[1]
     newRole = msg.match[2].trim()
 
