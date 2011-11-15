@@ -8,11 +8,11 @@
 # mustache me <query> - Searches Google Images for the specified query and
 #                       mustaches it.
 module.exports = (robot) ->
-  robot.respond /(image|img)( me)? (.*)/i, (msg) ->
+  robot.respond /(imagen|img)( de)? (.*)/i, (msg) ->
     imageMe msg, msg.match[3], (url) ->
       msg.send url
 
-  robot.respond /animate me (.*)/i, (msg) ->
+  robot.respond /una animacion de (.*)/i, (msg) ->
     imageMe msg, "animated #{msg.match[1]}", (url) ->
       msg.send url
 
